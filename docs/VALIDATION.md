@@ -89,3 +89,21 @@ Two portability details were required to reach exact parity and are documented i
   settings endpoint. In a normal interactive session the extension only uses the standard
   `extensionSettings` + `saveSettingsDebounced()` path.
 - No packaging for the official SillyTavern content repository; not attempted in this task.
+
+## Evidence artifacts
+
+- `docs/st-panel-open.png` — the extension live inside SillyTavern 1.19.0: card fields detected
+  (*Tavi Rellan*), the six generated checks with per-check enable boxes, response-length control,
+  Run/Stop, Save as baseline, Compare with baseline, the restored baseline line
+  (`Baseline saved 2026-09-28T02:18:41.751Z · overall 10/10 · 2 checks`), and the privacy-safe
+  feedback packet box.
+- `docs/st-panel-loaded.png`, `docs/st-panel-running.png` — earlier captures from the same session.
+- CLI evidence captured during validation (text): the ST server log lines for the extension
+  discovery (`{ type: 'local', name: 'third-party/CharacterBench-SillyTavern' }`), the webpack
+  bundle build, the install endpoint response (`{"version":"0.1.0-alpha",...}`), and the
+  Ollama-backed completion (`finish_reason: 'length'`, 48 completion tokens).
+- The extension was installed through SillyTavern's own **Install extension** endpoint from a local
+  git URL, and the installed checkout is the committed revision `0c1c932`.
+
+Screenshots were taken with the extension panel expanded via SillyTavern's own inline-drawer
+toggle (the same handler a user click triggers).
