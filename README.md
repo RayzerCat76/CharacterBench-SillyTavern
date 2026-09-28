@@ -28,12 +28,12 @@ Extension version: `0.1.0-alpha`.
    **regressions, improvements and unchanged checks**.
 7. **Export feedback** as a privacy-safe packet.
 
-## Install (SillyTavern → Extensions → Install Extension)
+## Install — Extensions → Install Extension → paste the Git repository URL
 
-SillyTavern can install an extension directly from a Git repository URL:
+SillyTavern installs extensions directly from a Git repository URL:
 
-1. Open SillyTavern → **Extensions** (the plug icon) → **Install extension**.
-2. Paste this repository's Git URL, e.g. `https://github.com/<owner>/CharacterBench-SillyTavern`.
+1. Open SillyTavern → **Extensions** (the plug icon) → **Install Extension**.
+2. Paste the Git repository URL: `https://github.com/RayzerCat76/CharacterBench-SillyTavern`.
 3. Install, then reload the page (SillyTavern usually asks).
 
 The extension directory must contain `manifest.json` at its root, which this repository does.
