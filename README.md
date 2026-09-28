@@ -53,10 +53,12 @@ Then reload SillyTavern. The folder must keep `manifest.json` at its root.
 
 ### Requirements
 
-- A current SillyTavern install (developed and validated against **1.19.0**).
+- **SillyTavern 1.19.0 or newer.** 1.19.0 is the only version that has been
+  validated (see `docs/VALIDATION.md`); older versions are neither tested nor claimed.
 - A configured model/provider in SillyTavern that can chat (Ollama, OpenAI-compatible, etc.).
 - A character selected.
-- No Python, no separate Ollama configuration, no CharacterBench server.
+- No Python, no Node build step, no separate Ollama configuration, no CharacterBench server,
+  no SillyTavern server plugin.
 
 ## Use
 

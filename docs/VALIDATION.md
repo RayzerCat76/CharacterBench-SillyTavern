@@ -14,8 +14,8 @@ Extension version `0.1.0-alpha`. Standalone companion: CharacterBench `v0.2.1-al
 | Character used | synthetic V2 card *Tavi Rellan* (`tests/fixtures/card_tavi_v2.json`, name/lore/example dialogue) |
 | Install method | SillyTavern's own **Extensions → Install extension** endpoint over a local git URL (`git clone --depth 1`) |
 
-Test instances live outside the repo (`/tmp/st-runtime/...`); nothing in this repository depends on
-them. The sandbox SillyTavern was started with `--disableCsrf` **only** because automated settings
+The test instance is a throwaway local sandbox outside this repository; nothing in this
+repository depends on it. The sandbox SillyTavern was started with `--disableCsrf` **only** because automated settings
 saves were being rejected in the headless harness; this has no bearing on the extension.
 
 ## Required evidence
@@ -97,7 +97,7 @@ Two portability details were required to reach exact parity and are documented i
   Run/Stop, Save as baseline, Compare with baseline, the restored baseline line
   (`Baseline saved 2026-09-28T02:18:41.751Z · overall 10/10 · 2 checks`), and the privacy-safe
   feedback packet box.
-- `docs/st-panel-loaded.png`, `docs/st-panel-running.png` — earlier captures from the same session.
+- `docs/st-panel-loaded.png` — the extension listed in SillyTavern's Extensions panel.
 - CLI evidence captured during validation (text): the ST server log lines for the extension
   discovery (`{ type: 'local', name: 'third-party/CharacterBench-SillyTavern' }`), the webpack
   bundle build, the install endpoint response (`{"version":"0.1.0-alpha",...}`), and the
