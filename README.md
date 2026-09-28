@@ -10,7 +10,8 @@ in SillyTavern, using the model/provider SillyTavern is already configured with.
 This is the SillyTavern companion to the standalone **CharacterBench** project
 ([GitHub](https://github.com/RayzerCat76/CharacterBenchmark) · v0.2.1-alpha). It is an
 independent local tool that *interacts* with SillyTavern — it is **not** an official SillyTavern
-extension, not endorsed by SillyTavern, and it does not install anything into SillyTavern itself.
+extension and is not endorsed by SillyTavern. It installs only as a third-party extension; it does
+not modify SillyTavern core or require a server plugin.
 
 Extension version: `0.1.0-alpha`.
 

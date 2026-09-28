@@ -7,7 +7,7 @@
     "css": "style.css",
     "author": "Project 5090",
     "version": "0.1.0-alpha",
-    "homePage": "https://github.com/RayzerCat76/CharacterBenchmark",
+    "homePage": "https://github.com/RayzerCat76/CharacterBench-SillyTavern",
     "minimum_client_version": "1.19.0",
     "hooks": {
         "activate": "init",

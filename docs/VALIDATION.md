@@ -107,3 +107,36 @@ Two portability details were required to reach exact parity and are documented i
 
 Screenshots were taken with the extension panel expanded via SillyTavern's own inline-drawer
 toggle (the same handler a user click triggers).
+
+
+## Public GitHub URL acceptance — 2026-09-28
+
+After the initial local-git validation above, the public alpha was pushed to
+`https://github.com/RayzerCat76/CharacterBench-SillyTavern` at commit
+`d0708a10e89705828c93b135c4dcd7df14a5dccd`. A fresh SillyTavern **1.19.0**
+sandbox then repeated the release acceptance against that real public GitHub URL.
+
+| # | public-release acceptance | result | evidence |
+|---|---|---|---|
+| 1 | install from the real public Git URL | **PASS** | installed from the public repository URL; installed checkout `origin` points to that URL and resolved to `d0708a1` |
+| 2 | fresh reload is clean | **PASS** | extension activated as `third-party/CharacterBench-SillyTavern`; no CharacterBench runtime errors |
+| 3 | active character detected | **PASS** | loaded 6 starter checks for the synthetic test character |
+| 4 | real check run | **PASS** | `identity` ran through SillyTavern's configured Ollama path; `Ran 1 of 1 checks. Overall 10/10.` |
+| 5 | baseline save | **PASS** | baseline stored in SillyTavern extension settings and shown in the panel |
+| 6 | rerun / compare | **PASS** | rendered `Comparison: 10 → 10 (0)` with regression / improvement / unchanged sections |
+| 7 | disable / re-enable | **PASS** | panel disappeared while disabled and returned after re-enable; baseline remained available |
+| 8 | uninstall | **PASS** | extension folder removed; SillyTavern stayed healthy and characters still loaded |
+| 9 | chat history unchanged | **PASS** | `chat.length` stayed `1 → 1` and per-message fingerprints were identical |
+| 10 | browser network audit | **PASS** | browser capture showed only same-origin `127.0.0.1:8000` SillyTavern traffic; published extension code contains no `fetch`, `XMLHttpRequest`, `WebSocket`, or `sendBeacon` calls |
+
+The GitHub installation and configured Ollama traffic occur server-side and are expected. The
+automated harness could not dispatch the install dialog's confirm button with a synthetic click,
+so the public-URL install was completed through the same SillyTavern install endpoint used by that
+dialog, with the real public repository URL. The resulting checkout's Git `origin` was verified.
+
+This public-URL acceptance also re-confirmed: no Python dependency, no CharacterBench server,
+no SillyTavern server plugin, no credential access, and no CharacterBench telemetry.
+
+The one remaining validation gap is unchanged: a live model run has not yet produced an actual
+score regression or improvement. That classification path is covered by deterministic unit tests,
+while the live acceptance run exercised the unchanged comparison path.
