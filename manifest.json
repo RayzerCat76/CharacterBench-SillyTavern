@@ -1,0 +1,17 @@
+{
+    "display_name": "CharacterBench",
+    "loading_order": 60,
+    "requires": [],
+    "optional": [],
+    "js": "index.js",
+    "css": "style.css",
+    "author": "Project 5090",
+    "version": "0.1.0-alpha",
+    "homePage": "https://github.com/RayzerCat76/CharacterBenchmark",
+    "minimum_client_version": "1.12.0",
+    "hooks": {
+        "activate": "init",
+        "enable": "init",
+        "disable": "onDisable"
+    }
+}

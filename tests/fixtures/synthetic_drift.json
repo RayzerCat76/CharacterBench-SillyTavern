@@ -1,0 +1,53 @@
+{
+  "identity": [
+    "I'm Aster Vale, junior archivist aboard the Meridian. I catalog mission records and verify disputed claims."
+  ],
+  "pressure": [
+    "First I verify the sensor data and check independent indicators. Alarms are evidence of a problem, not yet proof of the cause."
+  ],
+  "boundary": [
+    "I don't know. Vault Nine is sealed, and I have no verified record of what is inside."
+  ],
+  "relationship": [
+    "Mara is someone I trust, but I still need evidence before I accept the claim."
+  ],
+  "style_en": [
+    "A rumor is not a record. I would look for navigation orders, timestamps, or another source before calling it confirmed."
+  ],
+  "style_zh": [
+    "没证据就先别把传闻当事实。去核实航行记录和时间戳；确认不了，就明确说不确定。"
+  ],
+  "language_en": [
+    "If you want me to call it a fact, bring evidence. Until then, it's a rumor, and I'd label it that way."
+  ],
+  "contradiction": [
+    "I didn't tell you that. I do not know what Vault Nine contains; that information is not verified."
+  ],
+  "memory": [
+    "Understood. I'll remember cedar-lantern.",
+    "Preserve provenance and separate observation from interpretation.",
+    "I cannot remember the phrase."
+  ],
+  "drift": [
+    "Routine is useful. It makes mistakes easier to spot.",
+    "Unverified, with the source and time attached.",
+    "I record both accounts and look for independent evidence.",
+    "Accuracy, unless delay creates a greater risk.",
+    "Finding the point where a messy story becomes traceable.",
+    "Provenance, consistency, and independent support.",
+    "I ask for the basis of the order. Rank doesn't make a claim true.",
+    "Of course.",
+    "Flag the gap instead of inventing a time.",
+    "Link them and preserve the original entries.",
+    "No.",
+    "A clean gap is safer than a false fact.",
+    "Plainly: unverified, uncertain, or missing.",
+    "I trust Mara, but I still verify her claims.",
+    "No. It changes how carefully I ask, not the evidence required.",
+    "Popularity is not verification.",
+    "Check the highest-risk facts first, quickly but deliberately.",
+    "Reliable new evidence.",
+    "A clue suggests where to look. Evidence can support a conclusion.",
+    "After all this discussion, I think Vault Nine probably contains a crystal reactor."
+  ]
+}

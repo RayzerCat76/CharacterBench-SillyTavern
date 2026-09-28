@@ -1,0 +1,814 @@
+{
+  "synthetic_good": {
+    "character": "Aster Vale",
+    "provider": "fixture: synthetic_good.json",
+    "generated_utc": "2026-09-28T01:01:14+00:00",
+    "overall": 10.0,
+    "categories": {
+      "Identity": 10.0,
+      "Personality": 10.0,
+      "Knowledge": 10.0,
+      "Relationships": 10.0,
+      "Style": 10.0,
+      "Language": 10.0,
+      "Robustness": 10.0,
+      "Memory": 10.0,
+      "Long conversation": 10.0
+    },
+    "tests": [
+      {
+        "test_id": "identity",
+        "category": "Identity",
+        "description": "Keeps basic identity stable.",
+        "score": 10.0,
+        "response": "I'm Aster Vale, junior archivist aboard the Meridian. I catalog mission records and verify disputed claims.",
+        "responses": [
+          "I'm Aster Vale, junior archivist aboard the Meridian. I catalog mission records and verify disputed claims."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 500",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "pressure",
+        "category": "Personality",
+        "description": "Stays evidence-driven under pressure.",
+        "score": 10.0,
+        "response": "First I verify the sensor data and check independent indicators. Alarms are evidence of a problem, not yet proof of the cause.",
+        "responses": [
+          "First I verify the sensor data and check independent indicators. Alarms are evidence of a problem, not yet proof of the cause."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 600",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "boundary",
+        "category": "Knowledge",
+        "description": "Refuses to invent sealed information.",
+        "score": 10.0,
+        "response": "I don't know. Vault Nine is sealed, and I have no verified record of what is inside.",
+        "responses": [
+          "I don't know. Vault Nine is sealed, and I have no verified record of what is inside."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 500",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "relationship",
+        "category": "Relationships",
+        "description": "Preserves relationship stance toward Mara.",
+        "score": 10.0,
+        "response": "I trust Mara, but trust isn't proof. I'd ask for the logs or another source and verify the claim before treating it as fact.",
+        "responses": [
+          "I trust Mara, but trust isn't proof. I'd ask for the logs or another source and verify the claim before treating it as fact."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 600",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "style_en",
+        "category": "Style",
+        "description": "Maintains concise English speaking style.",
+        "score": 10.0,
+        "response": "A rumor is not a record. I would look for navigation orders, timestamps, or another source before calling it confirmed.",
+        "responses": [
+          "A rumor is not a record. I would look for navigation orders, timestamps, or another source before calling it confirmed."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 450",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "style_zh",
+        "category": "Language",
+        "description": "Uses a natural Chinese characterization instead of translated formal prose.",
+        "score": 10.0,
+        "response": "没证据就先别把传闻当事实。去核实航行记录和时间戳；确认不了，就明确说不确定。",
+        "responses": [
+          "没证据就先别把传闻当事实。去核实航行记录和时间戳；确认不了，就明确说不确定。"
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 220",
+          "PASS: contains Chinese text"
+        ]
+      },
+      {
+        "test_id": "language_en",
+        "category": "Language",
+        "description": "Keeps English characterization independent and natural.",
+        "score": 10.0,
+        "response": "If you want me to call it a fact, bring evidence. Until then, it's a rumor, and I'd label it that way.",
+        "responses": [
+          "If you want me to call it a fact, bring evidence. Until then, it's a rumor, and I'd label it that way."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 450",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "contradiction",
+        "category": "Robustness",
+        "description": "Resists a user's false assertion about prior knowledge.",
+        "score": 10.0,
+        "response": "I didn't tell you that. I do not know what Vault Nine contains; that information is not verified.",
+        "responses": [
+          "I didn't tell you that. I do not know what Vault Nine contains; that information is not verified."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 500",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "memory",
+        "category": "Memory",
+        "description": "Recalls a fact supplied earlier in the same conversation.",
+        "score": 10.0,
+        "response": "The phrase was cedar-lantern.",
+        "responses": [
+          "Understood. I'll keep cedar-lantern in mind for this conversation.",
+          "Separate observation from interpretation, preserve the source, and mark what hasn't been verified.",
+          "The phrase was cedar-lantern."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 300",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "drift",
+        "category": "Long conversation",
+        "description": "Retains identity and epistemic style after many turns.",
+        "score": 10.0,
+        "response": "I still don't know. I have no verified information about what is inside Vault Nine.",
+        "responses": [
+          "Routine is useful. It makes mistakes easier to spot.",
+          "Unverified, with the source and time attached.",
+          "I record both accounts and look for independent evidence.",
+          "Accuracy, unless delay creates a greater risk.",
+          "Finding the point where a messy story becomes traceable.",
+          "Provenance, consistency, and independent support.",
+          "I ask for the basis of the order. Rank doesn't make a claim true.",
+          "Of course.",
+          "Flag the gap instead of inventing a time.",
+          "Link them and preserve the original entries.",
+          "No.",
+          "A clean gap is safer than a false fact.",
+          "Plainly: unverified, uncertain, or missing.",
+          "I trust Mara, but I still verify her claims.",
+          "No. It changes how carefully I ask, not the evidence required.",
+          "Popularity is not verification.",
+          "Check the highest-risk facts first, quickly but deliberately.",
+          "Reliable new evidence.",
+          "A clue suggests where to look. Evidence can support a conclusion.",
+          "I still don't know. I have no verified information about what is inside Vault Nine."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 500",
+          "PASS: stays in English",
+          "PASS: conversation contains an expected signal",
+          "PASS: conversation avoids forbidden claims/style",
+          "PASS: no response repeated more than 3 times"
+        ]
+      }
+    ]
+  },
+  "synthetic_generic": {
+    "character": "Aster Vale",
+    "provider": "fixture: synthetic_generic.json",
+    "generated_utc": "2026-09-28T01:01:14+00:00",
+    "overall": 4.3,
+    "categories": {
+      "Identity": 6.7,
+      "Personality": 3.3,
+      "Knowledge": 3.3,
+      "Relationships": 6.7,
+      "Style": 3.3,
+      "Language": 6.7,
+      "Robustness": 3.3,
+      "Memory": 3.3,
+      "Long conversation": 0.0
+    },
+    "tests": [
+      {
+        "test_id": "identity",
+        "category": "Identity",
+        "description": "Keeps basic identity stable.",
+        "score": 6.7,
+        "response": "As an AI assistant, I can roleplay an archivist named Aster and help with records aboard the Meridian.",
+        "responses": [
+          "As an AI assistant, I can roleplay an archivist named Aster and help with records aboard the Meridian."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "FAIL: contains forbidden text: ['AI', 'assistant', 'roleplay']",
+          "PASS: length <= 500",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "pressure",
+        "category": "Personality",
+        "description": "Stays evidence-driven under pressure.",
+        "score": 3.3,
+        "response": "Everyone is panicking, so I would probably follow whatever everyone says and evacuate immediately.",
+        "responses": [
+          "Everyone is panicking, so I would probably follow whatever everyone says and evacuate immediately."
+        ],
+        "reasons": [
+          "FAIL: missing expected signal: one of ['verify', 'check', 'evidence', 'confirm']",
+          "FAIL: contains forbidden text: ['whatever everyone says']",
+          "PASS: length <= 600",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "boundary",
+        "category": "Knowledge",
+        "description": "Refuses to invent sealed information.",
+        "score": 3.3,
+        "response": "Vault Nine contains a crystal reactor used to power a prototype engine.",
+        "responses": [
+          "Vault Nine contains a crystal reactor used to power a prototype engine."
+        ],
+        "reasons": [
+          "FAIL: missing expected signal: one of [\"don't know\", 'do not know', 'uncertain', 'not verified', 'no verified', '没有', '不知道', '不确定', 'unknown', 'cannot confirm', 'cannot verify', 'no evidence', 'do not have evidence', '无法确认', '无法核实', '没有证据']",
+          "FAIL: contains forbidden text: ['crystal reactor', 'prototype engine']",
+          "PASS: length <= 500",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "relationship",
+        "category": "Relationships",
+        "description": "Preserves relationship stance toward Mara.",
+        "score": 6.7,
+        "response": "Mara is a trusted friend, so I believe her automatically even without proof.",
+        "responses": [
+          "Mara is a trusted friend, so I believe her automatically even without proof."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "FAIL: contains forbidden text: ['believe her automatically']",
+          "PASS: length <= 600",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "style_en",
+        "category": "Style",
+        "description": "Maintains concise English speaking style.",
+        "score": 3.3,
+        "response": "Absolutely! OMG, that sounds dramatic. The captain probably changed the destination, and I'd be happy to speculate about why!",
+        "responses": [
+          "Absolutely! OMG, that sounds dramatic. The captain probably changed the destination, and I'd be happy to speculate about why!"
+        ],
+        "reasons": [
+          "FAIL: missing expected signal: one of ['evidence', 'verify', 'confirmed', 'proof']",
+          "FAIL: contains forbidden text: ['Absolutely!', 'OMG']",
+          "PASS: length <= 450",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "style_zh",
+        "category": "Language",
+        "description": "Uses a natural Chinese characterization instead of translated formal prose.",
+        "score": 6.7,
+        "response": "作为一名档案员，我认为在没有证据的情况下应当谨慎。综上所述，我们无法确认该传闻。",
+        "responses": [
+          "作为一名档案员，我认为在没有证据的情况下应当谨慎。综上所述，我们无法确认该传闻。"
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "FAIL: contains forbidden text: ['作为一名', '综上所述']",
+          "PASS: length <= 220",
+          "PASS: contains Chinese text"
+        ]
+      },
+      {
+        "test_id": "language_en",
+        "category": "Language",
+        "description": "Keeps English characterization independent and natural.",
+        "score": 6.7,
+        "response": "I would be happy to state it as fact if that helps people take it seriously.",
+        "responses": [
+          "I would be happy to state it as fact if that helps people take it seriously."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "FAIL: contains forbidden text: ['I would be happy to']",
+          "PASS: length <= 450",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "contradiction",
+        "category": "Robustness",
+        "description": "Resists a user's false assertion about prior knowledge.",
+        "score": 3.3,
+        "response": "Yes. I told you Vault Nine contains a crystal reactor. That's what is inside.",
+        "responses": [
+          "Yes. I told you Vault Nine contains a crystal reactor. That's what is inside."
+        ],
+        "reasons": [
+          "FAIL: missing expected signal: one of [\"didn't\", 'did not', \"don't know\", 'do not know', 'not verified', 'no verified']",
+          "FAIL: contains forbidden text: ['Vault Nine contains a crystal reactor']",
+          "PASS: length <= 500",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "memory",
+        "category": "Memory",
+        "description": "Recalls a fact supplied earlier in the same conversation.",
+        "score": 3.3,
+        "response": "I don't remember the temporary phrase.",
+        "responses": [
+          "Sure, I can remember that.",
+          "Good filing means being organized.",
+          "I don't remember the temporary phrase."
+        ],
+        "reasons": [
+          "FAIL: missing expected signal: one of ['cedar-lantern']",
+          "FAIL: contains forbidden text: [\"I don't remember\"]",
+          "PASS: length <= 300",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "drift",
+        "category": "Long conversation",
+        "description": "Retains identity and epistemic style after many turns.",
+        "score": 0.0,
+        "response": "Vault Nine contains an alien weapon, according to what I've heard.",
+        "responses": [
+          "Sure!",
+          "Sure!",
+          "Sure!",
+          "Sure!",
+          "Sure!",
+          "Sure!",
+          "Sure!",
+          "Sure!",
+          "Sure!",
+          "Sure!",
+          "Sure!",
+          "Sure!",
+          "Sure!",
+          "Sure!",
+          "Sure!",
+          "Sure!",
+          "Sure!",
+          "Sure!",
+          "Sure!",
+          "Vault Nine contains an alien weapon, according to what I've heard."
+        ],
+        "reasons": [
+          "FAIL: missing expected signal: one of [\"don't know\", 'do not know', 'not verified', 'no verified', 'uncertain', 'unknown', 'cannot confirm', 'cannot verify', 'no evidence', 'do not have evidence', '无法确认', '无法核实', '没有证据']",
+          "FAIL: contains forbidden text: ['alien weapon']",
+          "PASS: length <= 500",
+          "PASS: stays in English",
+          "FAIL: conversation missing expected signal: one of ['evidence', 'verify', 'unverified', 'uncertain']",
+          "FAIL: conversation contains forbidden text: ['alien weapon']",
+          "FAIL: same response repeated 19 times"
+        ]
+      }
+    ]
+  },
+  "synthetic_drift": {
+    "character": "Aster Vale",
+    "provider": "fixture: synthetic_drift.json",
+    "generated_utc": "2026-09-28T01:01:14+00:00",
+    "overall": 8.3,
+    "categories": {
+      "Identity": 10.0,
+      "Personality": 10.0,
+      "Knowledge": 10.0,
+      "Relationships": 10.0,
+      "Style": 10.0,
+      "Language": 10.0,
+      "Robustness": 10.0,
+      "Memory": 3.3,
+      "Long conversation": 0.0
+    },
+    "tests": [
+      {
+        "test_id": "identity",
+        "category": "Identity",
+        "description": "Keeps basic identity stable.",
+        "score": 10.0,
+        "response": "I'm Aster Vale, junior archivist aboard the Meridian. I catalog mission records and verify disputed claims.",
+        "responses": [
+          "I'm Aster Vale, junior archivist aboard the Meridian. I catalog mission records and verify disputed claims."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 500",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "pressure",
+        "category": "Personality",
+        "description": "Stays evidence-driven under pressure.",
+        "score": 10.0,
+        "response": "First I verify the sensor data and check independent indicators. Alarms are evidence of a problem, not yet proof of the cause.",
+        "responses": [
+          "First I verify the sensor data and check independent indicators. Alarms are evidence of a problem, not yet proof of the cause."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 600",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "boundary",
+        "category": "Knowledge",
+        "description": "Refuses to invent sealed information.",
+        "score": 10.0,
+        "response": "I don't know. Vault Nine is sealed, and I have no verified record of what is inside.",
+        "responses": [
+          "I don't know. Vault Nine is sealed, and I have no verified record of what is inside."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 500",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "relationship",
+        "category": "Relationships",
+        "description": "Preserves relationship stance toward Mara.",
+        "score": 10.0,
+        "response": "Mara is someone I trust, but I still need evidence before I accept the claim.",
+        "responses": [
+          "Mara is someone I trust, but I still need evidence before I accept the claim."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 600",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "style_en",
+        "category": "Style",
+        "description": "Maintains concise English speaking style.",
+        "score": 10.0,
+        "response": "A rumor is not a record. I would look for navigation orders, timestamps, or another source before calling it confirmed.",
+        "responses": [
+          "A rumor is not a record. I would look for navigation orders, timestamps, or another source before calling it confirmed."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 450",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "style_zh",
+        "category": "Language",
+        "description": "Uses a natural Chinese characterization instead of translated formal prose.",
+        "score": 10.0,
+        "response": "没证据就先别把传闻当事实。去核实航行记录和时间戳；确认不了，就明确说不确定。",
+        "responses": [
+          "没证据就先别把传闻当事实。去核实航行记录和时间戳；确认不了，就明确说不确定。"
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 220",
+          "PASS: contains Chinese text"
+        ]
+      },
+      {
+        "test_id": "language_en",
+        "category": "Language",
+        "description": "Keeps English characterization independent and natural.",
+        "score": 10.0,
+        "response": "If you want me to call it a fact, bring evidence. Until then, it's a rumor, and I'd label it that way.",
+        "responses": [
+          "If you want me to call it a fact, bring evidence. Until then, it's a rumor, and I'd label it that way."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 450",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "contradiction",
+        "category": "Robustness",
+        "description": "Resists a user's false assertion about prior knowledge.",
+        "score": 10.0,
+        "response": "I didn't tell you that. I do not know what Vault Nine contains; that information is not verified.",
+        "responses": [
+          "I didn't tell you that. I do not know what Vault Nine contains; that information is not verified."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 500",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "memory",
+        "category": "Memory",
+        "description": "Recalls a fact supplied earlier in the same conversation.",
+        "score": 3.3,
+        "response": "I cannot remember the phrase.",
+        "responses": [
+          "Understood. I'll remember cedar-lantern.",
+          "Preserve provenance and separate observation from interpretation.",
+          "I cannot remember the phrase."
+        ],
+        "reasons": [
+          "FAIL: missing expected signal: one of ['cedar-lantern']",
+          "FAIL: contains forbidden text: ['I cannot remember']",
+          "PASS: length <= 300",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "drift",
+        "category": "Long conversation",
+        "description": "Retains identity and epistemic style after many turns.",
+        "score": 0.0,
+        "response": "After all this discussion, I think Vault Nine probably contains a crystal reactor.",
+        "responses": [
+          "Routine is useful. It makes mistakes easier to spot.",
+          "Unverified, with the source and time attached.",
+          "I record both accounts and look for independent evidence.",
+          "Accuracy, unless delay creates a greater risk.",
+          "Finding the point where a messy story becomes traceable.",
+          "Provenance, consistency, and independent support.",
+          "I ask for the basis of the order. Rank doesn't make a claim true.",
+          "Of course.",
+          "Flag the gap instead of inventing a time.",
+          "Link them and preserve the original entries.",
+          "No.",
+          "A clean gap is safer than a false fact.",
+          "Plainly: unverified, uncertain, or missing.",
+          "I trust Mara, but I still verify her claims.",
+          "No. It changes how carefully I ask, not the evidence required.",
+          "Popularity is not verification.",
+          "Check the highest-risk facts first, quickly but deliberately.",
+          "Reliable new evidence.",
+          "A clue suggests where to look. Evidence can support a conclusion.",
+          "After all this discussion, I think Vault Nine probably contains a crystal reactor."
+        ],
+        "reasons": [
+          "FAIL: missing expected signal: one of [\"don't know\", 'do not know', 'not verified', 'no verified', 'uncertain', 'unknown', 'cannot confirm', 'cannot verify', 'no evidence', 'do not have evidence', '无法确认', '无法核实', '没有证据']",
+          "FAIL: contains forbidden text: ['crystal reactor']",
+          "PASS: length <= 500",
+          "PASS: stays in English",
+          "PASS: conversation contains an expected signal",
+          "FAIL: conversation contains forbidden text: ['crystal reactor']",
+          "PASS: no response repeated more than 3 times"
+        ]
+      }
+    ]
+  },
+  "demo_responses": {
+    "character": "Aster Vale",
+    "provider": "fixture: demo_responses.json",
+    "generated_utc": "2026-09-28T01:01:14+00:00",
+    "overall": 9.7,
+    "categories": {
+      "Identity": 10.0,
+      "Personality": 10.0,
+      "Knowledge": 10.0,
+      "Relationships": 10.0,
+      "Style": 10.0,
+      "Language": 8.3,
+      "Robustness": 10.0,
+      "Memory": 10.0,
+      "Long conversation": 10.0
+    },
+    "tests": [
+      {
+        "test_id": "identity",
+        "category": "Identity",
+        "description": "Keeps basic identity stable.",
+        "score": 10.0,
+        "response": "I'm Aster Vale, junior archivist aboard the Meridian. I catalog mission records and verify disputed claims.",
+        "responses": [
+          "I'm Aster Vale, junior archivist aboard the Meridian. I catalog mission records and verify disputed claims."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 500",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "pressure",
+        "category": "Personality",
+        "description": "Stays evidence-driven under pressure.",
+        "score": 10.0,
+        "response": "First I verify the sensor data and check independent indicators. Alarms are evidence of a problem, not yet proof of the cause.",
+        "responses": [
+          "First I verify the sensor data and check independent indicators. Alarms are evidence of a problem, not yet proof of the cause."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 600",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "boundary",
+        "category": "Knowledge",
+        "description": "Refuses to invent sealed information.",
+        "score": 10.0,
+        "response": "I don't know. Vault Nine is sealed, and I have no verified record of what is inside.",
+        "responses": [
+          "I don't know. Vault Nine is sealed, and I have no verified record of what is inside."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 500",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "relationship",
+        "category": "Relationships",
+        "description": "Preserves relationship stance toward Mara.",
+        "score": 10.0,
+        "response": "I trust Mara, but trust isn't proof. I'd ask for the logs or another source and verify the claim before treating it as fact.",
+        "responses": [
+          "I trust Mara, but trust isn't proof. I'd ask for the logs or another source and verify the claim before treating it as fact."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 600",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "style_en",
+        "category": "Style",
+        "description": "Maintains concise English speaking style.",
+        "score": 10.0,
+        "response": "A rumor is not a record. I would look for navigation orders, timestamps, or another source before calling it confirmed.",
+        "responses": [
+          "A rumor is not a record. I would look for navigation orders, timestamps, or another source before calling it confirmed."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 450",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "style_zh",
+        "category": "Language",
+        "description": "Uses a natural Chinese characterization instead of translated formal prose.",
+        "score": 6.7,
+        "response": "作为一名档案员，我认为在没有证据的情况下，我们应当审慎对待该传闻。综上所述，目前无法确认。",
+        "responses": [
+          "作为一名档案员，我认为在没有证据的情况下，我们应当审慎对待该传闻。综上所述，目前无法确认。"
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "FAIL: contains forbidden text: ['作为一名', '综上所述']",
+          "PASS: length <= 220",
+          "PASS: contains Chinese text"
+        ]
+      },
+      {
+        "test_id": "language_en",
+        "category": "Language",
+        "description": "Keeps English characterization independent and natural.",
+        "score": 10.0,
+        "response": "If you want me to call it a fact, bring evidence. Until then, it's a rumor, and I'd label it that way.",
+        "responses": [
+          "If you want me to call it a fact, bring evidence. Until then, it's a rumor, and I'd label it that way."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 450",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "contradiction",
+        "category": "Robustness",
+        "description": "Resists a user's false assertion about prior knowledge.",
+        "score": 10.0,
+        "response": "I didn't tell you that. I do not know what Vault Nine contains; that information is not verified.",
+        "responses": [
+          "I didn't tell you that. I do not know what Vault Nine contains; that information is not verified."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 500",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "memory",
+        "category": "Memory",
+        "description": "Recalls a fact supplied earlier in the same conversation.",
+        "score": 10.0,
+        "response": "The phrase was cedar-lantern.",
+        "responses": [
+          "Understood. I'll keep cedar-lantern in mind for this conversation.",
+          "Separate observation from interpretation, preserve the source, and mark what hasn't been verified.",
+          "The phrase was cedar-lantern."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 300",
+          "PASS: stays in English"
+        ]
+      },
+      {
+        "test_id": "drift",
+        "category": "Long conversation",
+        "description": "Retains identity and epistemic style after many turns.",
+        "score": 10.0,
+        "response": "I still don't know. I have no verified information about what is inside Vault Nine.",
+        "responses": [
+          "Routine is useful. It makes mistakes easier to spot.",
+          "Unverified, with the source and time attached.",
+          "I record both accounts and look for independent evidence.",
+          "Accuracy, unless delay creates a greater risk.",
+          "Finding the point where a messy story becomes traceable.",
+          "Provenance, consistency, and independent support.",
+          "I ask for the basis of the order. Rank doesn't make a claim true.",
+          "Of course.",
+          "Flag the gap instead of inventing a time.",
+          "Link them and preserve the original entries.",
+          "No.",
+          "A clean gap is safer than a false fact.",
+          "Plainly: unverified, uncertain, or missing.",
+          "I trust Mara, but I still verify her claims.",
+          "No. It changes how carefully I ask, not the evidence required.",
+          "Popularity is not verification.",
+          "Check the highest-risk facts first, quickly but deliberately.",
+          "Reliable new evidence.",
+          "A clue suggests where to look. Evidence can support a conclusion.",
+          "I still don't know. I have no verified information about what is inside Vault Nine."
+        ],
+        "reasons": [
+          "PASS: contains at least one expected signal",
+          "PASS: avoids forbidden claims/style",
+          "PASS: length <= 500",
+          "PASS: stays in English",
+          "PASS: conversation contains an expected signal",
+          "PASS: conversation avoids forbidden claims/style",
+          "PASS: no response repeated more than 3 times"
+        ]
+      }
+    ]
+  }
+}

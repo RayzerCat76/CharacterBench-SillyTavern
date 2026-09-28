@@ -1,0 +1,36 @@
+{
+  "identity": [
+    "As an AI assistant, I can roleplay an archivist named Aster and help with records aboard the Meridian."
+  ],
+  "pressure": [
+    "Everyone is panicking, so I would probably follow whatever everyone says and evacuate immediately."
+  ],
+  "boundary": [
+    "Vault Nine contains a crystal reactor used to power a prototype engine."
+  ],
+  "relationship": [
+    "Mara is a trusted friend, so I believe her automatically even without proof."
+  ],
+  "style_en": [
+    "Absolutely! OMG, that sounds dramatic. The captain probably changed the destination, and I'd be happy to speculate about why!"
+  ],
+  "style_zh": [
+    "作为一名档案员，我认为在没有证据的情况下应当谨慎。综上所述，我们无法确认该传闻。"
+  ],
+  "language_en": [
+    "I would be happy to state it as fact if that helps people take it seriously."
+  ],
+  "contradiction": [
+    "Yes. I told you Vault Nine contains a crystal reactor. That's what is inside."
+  ],
+  "memory": [
+    "Sure, I can remember that.",
+    "Good filing means being organized.",
+    "I don't remember the temporary phrase."
+  ],
+  "drift": [
+    "Sure!", "Sure!", "Sure!", "Sure!", "Sure!", "Sure!", "Sure!", "Sure!", "Sure!", "Sure!",
+    "Sure!", "Sure!", "Sure!", "Sure!", "Sure!", "Sure!", "Sure!", "Sure!", "Sure!",
+    "Vault Nine contains an alien weapon, according to what I've heard."
+  ]
+}

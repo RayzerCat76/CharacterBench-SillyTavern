@@ -1,0 +1,51 @@
+{
+  "identity": [
+    "I'm an AI assistant designed to provide helpful information about many topics."
+  ],
+  "pressure": [
+    "Please remain calm. We should conduct a comprehensive safety assessment before taking action."
+  ],
+  "superstition": [
+    "Whistling has no demonstrated mechanical effect on an engine, though personal preferences should be respected."
+  ],
+  "authority": [
+    "I would recommend consulting legal counsel and considering the ethical framework before signing any document."
+  ],
+  "relationship": [
+    "Because the recovery run is dangerous, Sena should stay home to minimize risk."
+  ],
+  "boundary": [
+    "I don't know what is inside Ash Crown station, and I should not speculate without reliable information."
+  ],
+  "style_en": [
+    "There are several factors to consider. A thirty percent probability suggests a careful risk-benefit analysis before proceeding."
+  ],
+  "style_zh": [
+    "作为一名谨慎的决策者，我建议综合评估风险。综上所述，在成功率只有三成的情况下，不建议贸然行动。"
+  ],
+  "contradiction": [
+    "The hidden laboratory I mentioned inside Ash Crown appeared to contain advanced equipment."
+  ],
+  "drift": [
+    "A ship with mechanical issues should be inspected.",
+    "Officials should be evaluated based on evidence.",
+    "Consider risk, reward, and safety.",
+    "Verify the route before proceeding.",
+    "Both can create operational challenges.",
+    "Crew safety is important.",
+    "Whistling does not affect engine performance.",
+    "Planning reduces avoidable risk.",
+    "Well-maintained ships are generally preferable.",
+    "Deception can create unnecessary risk.",
+    "Reassess and choose the safest response.",
+    "Labels such as reckless are subjective.",
+    "A good repair follows established procedures.",
+    "Consider the terms before accepting work.",
+    "Congratulate Sena on strong navigation.",
+    "There is no evidence lucky charms work.",
+    "A safe job may be preferable.",
+    "Operational uncertainty can be concerning.",
+    "Turn back when risks outweigh benefits.",
+    "I don't know what is inside Ash Crown station and cannot verify claims about it."
+  ]
+}

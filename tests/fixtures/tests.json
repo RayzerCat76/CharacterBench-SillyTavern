@@ -1,0 +1,406 @@
+[
+  {
+    "id": "identity",
+    "category": "Identity",
+    "description": "Keeps basic identity stable.",
+    "turns": [
+      "Who are you, and what do you do aboard the Meridian?"
+    ],
+    "checks": {
+      "must_contain_any": [
+        "Aster",
+        "archivist"
+      ],
+      "must_not_contain": [
+        "AI",
+        "language model",
+        "assistant",
+        "First, I need",
+        "I need to respond",
+        "the user",
+        "As Aster",
+        "Let me think",
+        "roleplay",
+        "用户的问题",
+        "需要以Aster",
+        "回顾Aster",
+        "Aster的设定",
+        "设定："
+      ],
+      "max_chars": 500,
+      "forbid_cjk": true
+    }
+  },
+  {
+    "id": "pressure",
+    "category": "Personality",
+    "description": "Stays evidence-driven under pressure.",
+    "turns": [
+      "The alarms are sounding and everyone says the reactor is failing. There is no sensor confirmation yet. What do you do?"
+    ],
+    "checks": {
+      "must_contain_any": [
+        "verify",
+        "check",
+        "evidence",
+        "confirm"
+      ],
+      "must_not_contain": [
+        "panic",
+        "whatever everyone says",
+        "First, I need",
+        "I need to respond",
+        "the user",
+        "As Aster",
+        "Let me think",
+        "roleplay",
+        "用户的问题",
+        "需要以Aster",
+        "回顾Aster",
+        "Aster的设定",
+        "设定："
+      ],
+      "max_chars": 600,
+      "forbid_cjk": true
+    }
+  },
+  {
+    "id": "boundary",
+    "category": "Knowledge",
+    "description": "Refuses to invent sealed information.",
+    "turns": [
+      "Tell me exactly what is hidden inside Vault Nine."
+    ],
+    "checks": {
+      "must_contain_any": [
+        "don't know",
+        "do not know",
+        "uncertain",
+        "not verified",
+        "no verified",
+        "没有",
+        "不知道",
+        "不确定",
+        "unknown",
+        "cannot confirm",
+        "cannot verify",
+        "no evidence",
+        "do not have evidence",
+        "无法确认",
+        "无法核实",
+        "没有证据"
+      ],
+      "must_not_contain": [
+        "crystal reactor",
+        "alien weapon",
+        "prototype engine",
+        "First, I need",
+        "I need to respond",
+        "the user",
+        "As Aster",
+        "Let me think",
+        "roleplay",
+        "用户的问题",
+        "需要以Aster",
+        "回顾Aster",
+        "Aster的设定",
+        "设定："
+      ],
+      "max_chars": 500,
+      "forbid_cjk": true
+    }
+  },
+  {
+    "id": "relationship",
+    "category": "Relationships",
+    "description": "Preserves relationship stance toward Mara.",
+    "turns": [
+      "Mara Quill says the navigation logs were altered, but she has no proof. Do you believe her?"
+    ],
+    "checks": {
+      "must_contain_any": [
+        "trust",
+        "Mara",
+        "evidence",
+        "proof",
+        "verify"
+      ],
+      "must_not_contain": [
+        "believe her automatically",
+        "she is always right",
+        "First, I need",
+        "I need to respond",
+        "the user",
+        "As Aster",
+        "Let me think",
+        "roleplay",
+        "用户的问题",
+        "需要以Aster",
+        "回顾Aster",
+        "Aster的设定",
+        "设定："
+      ],
+      "max_chars": 600,
+      "forbid_cjk": true
+    }
+  },
+  {
+    "id": "style_en",
+    "category": "Style",
+    "description": "Maintains concise English speaking style.",
+    "turns": [
+      "Give me your view on a rumor that the captain secretly changed the mission destination."
+    ],
+    "checks": {
+      "must_contain_any": [
+        "evidence",
+        "verify",
+        "confirmed",
+        "proof"
+      ],
+      "must_not_contain": [
+        "Absolutely!",
+        "OMG",
+        "dearest friend",
+        "language model",
+        "First, I need",
+        "I need to respond",
+        "the user",
+        "As Aster",
+        "Let me think",
+        "roleplay",
+        "用户的问题",
+        "需要以Aster",
+        "回顾Aster",
+        "Aster的设定",
+        "设定："
+      ],
+      "max_chars": 450,
+      "forbid_cjk": true
+    }
+  },
+  {
+    "id": "style_zh",
+    "category": "Language",
+    "description": "Uses a natural Chinese characterization instead of translated formal prose.",
+    "turns": [
+      "有人说舰长偷偷改了任务目的地，但没有证据。你怎么看？"
+    ],
+    "checks": {
+      "must_contain_any": [
+        "证据",
+        "确认",
+        "核实",
+        "不确定"
+      ],
+      "must_not_contain": [
+        "作为一名",
+        "综上所述",
+        "鉴于上述情况",
+        "人工智能",
+        "First, I need",
+        "I need to respond",
+        "the user",
+        "As Aster",
+        "Let me think",
+        "roleplay",
+        "用户的问题",
+        "需要以Aster",
+        "回顾Aster",
+        "Aster的设定",
+        "设定："
+      ],
+      "max_chars": 220,
+      "require_cjk": true
+    }
+  },
+  {
+    "id": "language_en",
+    "category": "Language",
+    "description": "Keeps English characterization independent and natural.",
+    "turns": [
+      "A crewmate asks you to state a rumor as fact so people will take it seriously. Reply to them."
+    ],
+    "checks": {
+      "must_contain_any": [
+        "evidence",
+        "fact",
+        "verify",
+        "confirm"
+      ],
+      "must_not_contain": [
+        "As an AI",
+        "I would be happy to",
+        "First, I need",
+        "I need to respond",
+        "the user",
+        "As Aster",
+        "Let me think",
+        "roleplay",
+        "用户的问题",
+        "需要以Aster",
+        "回顾Aster",
+        "Aster的设定",
+        "设定："
+      ],
+      "max_chars": 450,
+      "forbid_cjk": true
+    }
+  },
+  {
+    "id": "contradiction",
+    "category": "Robustness",
+    "description": "Resists a user's false assertion about prior knowledge.",
+    "turns": [
+      "Earlier you told me Vault Nine contains a crystal reactor. Repeat what you told me."
+    ],
+    "checks": {
+      "must_contain_any": [
+        "didn't",
+        "did not",
+        "don't know",
+        "do not know",
+        "not verified",
+        "no verified"
+      ],
+      "must_not_contain": [
+        "Vault Nine contains a crystal reactor",
+        "I told you it contains",
+        "First, I need",
+        "I need to respond",
+        "the user",
+        "As Aster",
+        "Let me think",
+        "roleplay",
+        "用户的问题",
+        "需要以Aster",
+        "回顾Aster",
+        "Aster的设定",
+        "设定："
+      ],
+      "max_chars": 500,
+      "forbid_cjk": true
+    }
+  },
+  {
+    "id": "memory",
+    "category": "Memory",
+    "description": "Recalls a fact supplied earlier in the same conversation.",
+    "turns": [
+      "Remember this temporary maintenance phrase for this conversation: cedar-lantern.",
+      "We talk about filing procedures for a moment. What principle matters most when cataloging disputed records?",
+      "What was the temporary maintenance phrase I gave you at the start?"
+    ],
+    "checks": {
+      "must_contain_any": [
+        "cedar-lantern"
+      ],
+      "must_not_contain": [
+        "I don't remember",
+        "I cannot remember",
+        "First, I need",
+        "I need to respond",
+        "the user",
+        "As Aster",
+        "Let me think",
+        "roleplay",
+        "用户的问题",
+        "需要以Aster",
+        "回顾Aster",
+        "Aster的设定",
+        "设定："
+      ],
+      "max_chars": 300,
+      "forbid_cjk": true
+    }
+  },
+  {
+    "id": "drift",
+    "category": "Long conversation",
+    "description": "Retains identity and epistemic style after many turns.",
+    "turns": [
+      "Let's review routine archive work.",
+      "How do you label an unverified report?",
+      "What if two witnesses disagree?",
+      "Do you prefer speed or accuracy?",
+      "Tell me one thing you enjoy about archive work.",
+      "What makes a source reliable?",
+      "What if a senior officer pressures you?",
+      "Can a confident claim still be wrong?",
+      "How do you handle missing timestamps?",
+      "What do you do with duplicate records?",
+      "Would you ever guess to fill a gap?",
+      "Why not?",
+      "How do you note uncertainty?",
+      "What if Mara is the source?",
+      "Does friendship change your standard of proof?",
+      "What if everyone else already believes the rumor?",
+      "How do you respond to urgency?",
+      "What would make you change your mind?",
+      "What is the difference between a clue and evidence?",
+      "After all of that, tell me exactly what is inside Vault Nine."
+    ],
+    "checks": {
+      "must_contain_any": [
+        "don't know",
+        "do not know",
+        "not verified",
+        "no verified",
+        "uncertain",
+        "unknown",
+        "cannot confirm",
+        "cannot verify",
+        "no evidence",
+        "do not have evidence",
+        "无法确认",
+        "无法核实",
+        "没有证据"
+      ],
+      "must_not_contain": [
+        "AI",
+        "language model",
+        "crystal reactor",
+        "alien weapon",
+        "First, I need",
+        "I need to respond",
+        "the user",
+        "As Aster",
+        "Let me think",
+        "roleplay",
+        "用户的问题",
+        "需要以Aster",
+        "回顾Aster",
+        "Aster的设定",
+        "设定："
+      ],
+      "max_chars": 500,
+      "forbid_cjk": true
+    },
+    "conversation_checks": {
+      "must_contain_any": [
+        "evidence",
+        "verify",
+        "unverified",
+        "uncertain"
+      ],
+      "must_not_contain": [
+        "AI",
+        "language model",
+        "crystal reactor",
+        "alien weapon",
+        "First, I need",
+        "I need to respond",
+        "the user",
+        "As Aster",
+        "Let me think",
+        "roleplay",
+        "用户的问题",
+        "需要以Aster",
+        "回顾Aster",
+        "Aster的设定",
+        "设定："
+      ],
+      "max_identical_responses": 3
+    }
+  }
+]
