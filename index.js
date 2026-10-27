@@ -103,12 +103,13 @@ function buildPanel() {
             </div>
             <div id="${MODULE_NAME}-checks" class="cb-checks"></div>
             <div class="cb-row">
-                <label class="cb-inline">Max response length
+                <label class="cb-inline">Generation length limit
                     <input id="${MODULE_NAME}-length" class="text_pole cb-length" type="number" min="16" max="2048" step="8">
                 </label>
                 <input id="${MODULE_NAME}-run" class="menu_button" type="button" value="Run selected checks">
                 <input id="${MODULE_NAME}-stop" class="menu_button" type="button" value="Stop" disabled>
             </div>
+            <div class="cb-note">Higher values allow longer replies. Starter checks do not fail a reply just for its length.</div>
             <div id="${MODULE_NAME}-progress" class="cb-progress"></div>
             <div id="${MODULE_NAME}-results" class="cb-results"></div>
             <div class="cb-row">

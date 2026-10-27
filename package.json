@@ -1,6 +1,6 @@
 {
   "name": "characterbench-sillytavern",
-  "version": "0.1.0-alpha",
+  "version": "0.1.1-alpha",
   "description": "CharacterBench regression checks for SillyTavern (local extension, alpha).",
   "type": "module",
   "private": true,
