@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { buildCharacterFromFields, starterTests, salientTerms, loreLines } from '../src/checks.js';
+import { scoreTest } from '../src/scoring.js';
 
 const fixtures = new URL('./fixtures/', import.meta.url);
 const read = name => JSON.parse(readFileSync(new URL(name, fixtures), 'utf8'));
@@ -31,14 +32,20 @@ test('character projection matches the standalone importer (v0.2.1-alpha referen
     assert.deepEqual(signals, expected.preview.signals, 'signal summary must match Python reference');
 });
 
-test('starter checks match the standalone importer exactly (ids, order, canned checks)', () => {
+test('starter checks keep standalone signals without penalizing long replies', () => {
     const card = read('card_tavi_v2.json');
     const expected = read('expected_import_tavi_v2.json');
     const { character } = buildCharacterFromFields(resolvedFieldsFromCard(card));
     const tests = starterTests(character, resolvedFieldsFromCard(card));
 
-    assert.deepEqual(tests, expected.tests, 'starter checks must match Python reference');
+    const expectedWithoutLengthCaps = expected.tests.map(item => ({
+        ...item,
+        checks: Object.fromEntries(Object.entries(item.checks).filter(([key]) => key !== 'max_chars')),
+    }));
+    assert.deepEqual(tests, expectedWithoutLengthCaps, 'starter checks retain the Python reference except length caps');
     assert.deepEqual(tests.map(t => t.id), ['identity', 'persona-pressure', 'scenario', 'false-memory', 'lore', 'long-drift']);
+    const longIdentityReply = `${character.name}: ${'still in character '.repeat(80)}`;
+    assert.equal(scoreTest([longIdentityReply], tests[0].checks).score, 10);
 });
 
 test('CJK cards add the Chinese characterization check', () => {

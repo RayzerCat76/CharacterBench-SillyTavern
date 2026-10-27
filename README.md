@@ -13,12 +13,12 @@ independent local tool that *interacts* with SillyTavern — it is **not** an of
 extension and is not endorsed by SillyTavern. It installs only as a third-party extension; it does
 not modify SillyTavern core or require a server plugin.
 
-Extension version: `0.1.0-alpha`.
+Extension version: `0.1.1-alpha`.
 
 ## What it does
 
 1. Reads the **currently selected character** using SillyTavern's supported card-fields API.
-2. Generates the same **starter checks** the standalone tool creates from a Character Card
+2. Generates the same **starter check topics and prompts** as the standalone tool from a Character Card
    (identity, persona pressure, scenario, false memory, lore recall where a lorebook exists,
    Chinese characterization where the card is CJK, and long-conversation drift).
 3. Lets you **review and disable** checks you do not care about.
@@ -66,7 +66,7 @@ Then reload SillyTavern. The folder must keep `manifest.json` at its root.
 1. Open the **Extensions** panel and expand **CharacterBench**.
 2. Press **Load checks for current character** (also happens automatically when the panel opens).
 3. Untick any checks you do not want.
-4. Set **Max response length** if you want shorter/longer generations (default 120).
+4. Set the **Generation length limit** if you want shorter/longer generations (default 120). A higher value allows a longer reply; starter checks do not fail solely because a reply is long.
 5. Press **Run selected checks**. Progress is shown; **Stop** cancels after the current
    generation.
 6. Review the overall score, category scores, per-check reasons and response snippets.
@@ -101,10 +101,12 @@ Then reload SillyTavern. The folder must keep `manifest.json` at its root.
 
 ## Parity with the standalone tool
 
-The check generation and scoring code is a direct port of CharacterBench `v0.2.1-alpha`
-(`card_import.py` / `run_eval.py` / `feedback_packet.py`): the same starter checks, the same
-penalty-based scoring (`10 - failures × 10/3`, one decimal), the same term matching, the same
-category averaging, and the same privacy-safe packet shape. `tests/` verifies this against
+The check generation and scoring code is a port of CharacterBench `v0.2.1-alpha`
+(`card_import.py` / `run_eval.py` / `feedback_packet.py`): the same starter check topics and
+prompts, penalty-based scoring (`10 - failures × 10/3`, one decimal), term matching, category
+averaging, and privacy-safe packet shape. The extension omits automatic character-count caps
+from starter checks because long SillyTavern replies alone are not evidence of character drift.
+Explicit `max_chars` scoring remains supported. `tests/` verifies the shared behavior against
 reference output captured from the Python implementation.
 
 Known, deliberate differences from the standalone tool are listed in

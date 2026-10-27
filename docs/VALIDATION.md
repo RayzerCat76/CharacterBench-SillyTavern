@@ -3,6 +3,11 @@
 Extension version `0.1.0-alpha`. Standalone companion: CharacterBench `v0.2.1-alpha`
 (Apache-2.0), which is left untouched.
 
+This is the original `0.1.0-alpha` validation record. In `0.1.1-alpha`, starter checks stopped
+using automatic character-count caps after a tester reported "too long" check failures even
+with a higher SillyTavern generation limit. The parity findings below describe the original build;
+the current tests preserve the reference checks except for those caps.
+
 ## Environment used for live validation
 
 | item | value |
